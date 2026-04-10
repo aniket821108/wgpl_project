@@ -1,0 +1,118 @@
+.testimonials {
+  position: relative;
+  padding: 100px 5%;
+  background: var(--gray-light);
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+
+.testimonials__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+  color: var(--black);
+}
+
+.testimonials__card {
+  position: relative;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 48px 52px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.07);
+}
+
+.testimonials__quote {
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--gray-text);
+  font-style: italic;
+}
+
+.testimonials__quote-mark {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 0;
+  color: var(--black);
+  position: absolute;
+  opacity: 0.12;
+}
+
+.testimonials__quote-mark--open {
+  top: 30px;
+  left: 24px;
+}
+
+.testimonials__quote-mark--close {
+  bottom: 10px;
+  right: 24px;
+}
+
+/* Side photos */
+.testimonials__side-photo {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--white);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease;
+  z-index: 1;
+}
+
+.testimonials__side-photo:hover {
+  transform: scale(1.1);
+  z-index: 5;
+}
+
+.testimonials__side-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials__side-photo--left {
+  left: 4%;
+}
+
+.testimonials__side-photo--right {
+  right: 4%;
+}
+
+@media (max-width: 900px) {
+  .testimonials__side-photo {
+    width: 54px;
+    height: 54px;
+  }
+
+  .testimonials__side-photo--left {
+    left: 1%;
+  }
+
+  .testimonials__side-photo--right {
+    right: 1%;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonials__card {
+    padding: 36px 28px;
+  }
+
+  .testimonials__side-photo {
+    display: none;
+  }
+}
