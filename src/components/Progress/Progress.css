@@ -1,0 +1,125 @@
+.progress-section {
+  position: relative;
+  padding: 80px 5% 120px;
+  overflow: hidden;
+}
+
+.progress-section__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.progress-section__image-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-section__circle {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.progress-section__circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.progress-section__circle:hover img {
+  transform: scale(1.05);
+}
+
+/* Triangles */
+.progress-section__triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 1;
+}
+
+.progress-section__triangle--1 {
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-bottom: 95px solid var(--red);
+  top: -40px;
+  left: -10px;
+}
+
+.progress-section__triangle--2 {
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 60px solid var(--red);
+  bottom: 20px;
+  right: 5px;
+  transform: rotate(15deg);
+}
+
+.progress-section__heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: var(--black);
+}
+
+.progress-section__body {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--gray-text);
+  margin-bottom: 32px;
+  max-width: 400px;
+}
+
+.progress-section__readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--black);
+  transition: gap 0.25s ease;
+}
+
+.progress-section__readmore:hover {
+  gap: 16px;
+}
+
+.progress-section__squiggle {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 200px;
+  opacity: 0.7;
+  animation: float 6s ease-in-out infinite;
+}
+
+@media (max-width: 900px) {
+  .progress-section__inner {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .progress-section__circle {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 520px) {
+  .progress-section__circle {
+    width: 240px;
+    height: 240px;
+  }
+}
